@@ -211,7 +211,7 @@ export default function ProjectsPage() {
         >
           <h3 className="text-2xl font-medium mb-4">No projects found</h3>
           <p className="text-gray-400">
-            We couldn't find any projects matching this filter.
+            We couldn&apos;t find any projects matching this filter.
           </p>
         </motion.div>
       )}
@@ -225,8 +225,8 @@ export default function ProjectsPage() {
       >
         <h2 className="text-3xl font-bold mb-6">Have a project in mind?</h2>
         <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-          Whether you need a full application or help with part of one, I'd love
-          to hear about it.
+          Whether you need a full application or help with part of one, I&apos;d
+          love to hear about it.
         </p>
         <motion.a
           whileHover={{ scale: 1.05 }}
@@ -234,7 +234,7 @@ export default function ProjectsPage() {
           href="/contact"
           className="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition-colors"
         >
-          Let's Talk
+          Let&apos;s Talk
         </motion.a>
       </motion.div>
     </div>

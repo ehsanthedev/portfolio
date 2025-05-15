@@ -43,7 +43,8 @@ export default function Home() {
             className="md:w-1/2 mb-10 md:mb-0"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Hi, I'm <span className="text-yellow-400">Muhammad Ehsan</span>
+              Hi&lsquo; I&apos;m{' '}
+              <span className="text-yellow-400">Muhammad Ehsan</span>
             </h1>
             <h2 className="text-2xl md:text-3xl mb-6 text-gray-300">
               Frontend Developer
@@ -150,7 +151,7 @@ export default function Home() {
               Featured <span className="text-yellow-400">Projects</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Some of my recent work that I'm particularly proud of
+              Some of my recent work that I&apos;m particularly proud of
             </p>
           </motion.div>
 
@@ -249,7 +250,8 @@ export default function Home() {
               Ready to work together?
             </h2>
             <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-              I'm currently available for freelance work or full-time positions.
+              I&apos;m currently available for freelance work or full-time
+              positions.
             </p>
             <Link
               href="/pages/Contact"
