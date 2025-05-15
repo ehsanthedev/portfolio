@@ -231,7 +231,7 @@ export default function ProjectsPage() {
         <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          href="/contact"
+          href="/pages/Contact"
           className="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition-colors"
         >
           Let&apos;s Talk
