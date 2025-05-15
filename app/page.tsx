@@ -1,103 +1,265 @@
-import Image from "next/image";
+'use client';
+import profilePic from '../public/image.png';
+import Image from 'next/image';
+
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  // Skills data
+  const skills = [
+    { name: 'Next.js', level: 90 },
+    { name: 'React', level: 85 },
+    { name: 'TypeScript', level: 80 },
+    { name: 'Tailwind CSS', level: 85 },
+    { name: 'Node.js', level: 75 },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  // Animation variants
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      {/* Hero Section */}
+      <section className="py-20 md:py-32 px-4">
+        <div className="container mx-auto flex flex-col md:flex-row items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="md:w-1/2 mb-10 md:mb-0"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Hi, I'm <span className="text-yellow-400">Muhammad Ehsan</span>
+            </h1>
+            <h2 className="text-2xl md:text-3xl mb-6 text-gray-300">
+              Frontend Developer
+            </h2>
+            <p className="text-lg mb-8 text-gray-400 max-w-lg">
+              I build exceptional digital experiences with modern web
+              technologies. Focused on creating responsive, performant, and
+              accessible web applications.
+            </p>
+            <div className="flex gap-4">
+              <Link
+                href="/pages/Contact"
+                className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                Contact Me
+              </Link>
+              <Link
+                href="/pages/About"
+                className="border border-yellow-400 hover:bg-yellow-400/10 text-yellow-400 font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="md:w-1/2 flex justify-center"
           >
-            Read our docs
-          </a>
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-yellow-400">
+              {/* Replace with your actual image */}
+              <div className="w-full h-full bg-gray-700 flex items-center justify-center">
+                <Image
+                  className="text-4xl"
+                  src={profilePic}
+                  alt="Profile Pic"
+                />
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Skills Section */}
+      <section className="py-16 px-4 bg-gray-800">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              My <span className="text-yellow-400">Skills</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Here are the technologies I work with on a daily basis
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto"
+          >
+            {skills.map((skill, index) => (
+              <motion.div
+                key={index}
+                variants={item}
+                className="bg-gray-700/50 p-6 rounded-lg backdrop-blur-sm"
+              >
+                <div className="flex justify-between mb-2">
+                  <h3 className="font-bold">{skill.name}</h3>
+                  <span>{skill.level}%</span>
+                </div>
+                <div className="w-full bg-gray-600 rounded-full h-2.5">
+                  <div
+                    className="bg-yellow-400 h-2.5 rounded-full"
+                    style={{ width: `${skill.level}%` }}
+                  ></div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Projects Preview */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Featured <span className="text-yellow-400">Projects</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Some of my recent work that I'm particularly proud of
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Project 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-yellow-400/20 transition-all"
+            >
+              <div className="h-48 bg-gray-700 flex items-center justify-center">
+                <span className="text-4xl">📱</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">E-Commerce App</h3>
+                <p className="text-gray-400 mb-4">
+                  A modern e-commerce platform built with Next.js and Stripe
+                  integration.
+                </p>
+                <Link href="#" className="text-yellow-400 hover:underline">
+                  View Project →
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Project 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-yellow-400/20 transition-all"
+            >
+              <div className="h-48 bg-gray-700 flex items-center justify-center">
+                <span className="text-4xl">📊</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Analytics Dashboard</h3>
+                <p className="text-gray-400 mb-4">
+                  Real-time data visualization dashboard with interactive
+                  charts.
+                </p>
+                <Link href="#" className="text-yellow-400 hover:underline">
+                  View Project →
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Project 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-yellow-400/20 transition-all"
+            >
+              <div className="h-48 bg-gray-700 flex items-center justify-center">
+                <span className="text-4xl">🎵</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Music Streaming App</h3>
+                <p className="text-gray-400 mb-4">
+                  A Spotify-like music player with custom playlists and audio
+                  effects.
+                </p>
+                <Link href="#" className="text-yellow-400 hover:underline">
+                  View Project →
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/pages/Projects"
+              className="inline-block border border-yellow-400 text-yellow-400 hover:bg-yellow-400/10 font-bold py-3 px-8 rounded-lg transition-colors"
+            >
+              View All Projects
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 px-4 bg-gray-800">
+        <div className="container mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to work together?
+            </h2>
+            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+              I'm currently available for freelance work or full-time positions.
+            </p>
+            <Link
+              href="/pages/Contact"
+              className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition-colors inline-block"
+            >
+              Get In Touch
+            </Link>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
