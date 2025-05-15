@@ -89,13 +89,13 @@ export default function About() {
                 Who <span className="text-yellow-400">I Am</span>
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                I'm Muhammad Ehsan, a passionate frontend developer with over 5
-                years of experience creating beautiful, functional, and
+                I&apos;m Muhammad Ehsan, a passionate frontend developer with
+                over 5 years of experience creating beautiful, functional, and
                 user-centered digital experiences. I specialize in modern
                 JavaScript frameworks and have a keen eye for design details.
               </p>
               <p className="text-lg text-gray-300 mb-8">
-                When I'm not coding, you'll find me exploring new web
+                When I&apos;m not coding, you&apos;ll find me exploring new web
                 technologies, contributing to open-source projects, or mentoring
                 aspiring developers. I believe in writing clean, efficient code
                 and creating products that make a difference.
