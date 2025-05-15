@@ -108,11 +108,11 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="text-yellow-400 font-bold">Email:</h3>
-                  <p>mehsan@example.com</p>
+                  <p>ehsanthedev@gmail.com</p>
                 </div>
                 <div>
                   <h3 className="text-yellow-400 font-bold">From:</h3>
-                  <p>Karachi, Pakistan</p>
+                  <p>Faisalabad, Pakistan</p>
                 </div>
                 <div>
                   <h3 className="text-yellow-400 font-bold">Freelance:</h3>
