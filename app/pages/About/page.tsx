@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import {
   FaCode,
   FaPalette,
-  FaServer,
   FaMobile,
   FaDigitalTachograph,
 } from "react-icons/fa";
