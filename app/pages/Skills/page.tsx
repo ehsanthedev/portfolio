@@ -50,6 +50,8 @@ export default function SkillsPage() {
         { name: "Tailwind CSS", level: 85 },
         { name: "Figma", level: 75 },
         { name: "Adobe XD", level: 60 },
+        { name: "Adobe Photoshop", level: 80 },
+        { name: "Adobe Illustrator", level: 80 },
         { name: "User Research", level: 80 },
       ],
     },
