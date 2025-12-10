@@ -30,20 +30,20 @@ export default function ProjectsPage() {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
+      title: 'VAPE ZONE SALES TRACKER',
       description:
-        'A full-featured online store with product listings, cart functionality, and Stripe payment integration.',
+        'A business intelligence tool built to solve critical operational inefficiencies in a retail environment.',
       tags: ['Next.js', 'TypeScript', 'Stripe', 'Tailwind CSS'],
       category: 'fullstack',
       image: '/projects/ecommerce.jpg',
       githubUrl: 'https://github.com/yourusername/ecommerce',
-      liveUrl: 'https://ecommerce.example.com',
+      liveUrl: 'https://vaping-sales-tracker.vercel.app',
     },
     {
       id: 2,
-      title: 'Task Management App',
+      title: 'RESUME BUILDER APP',
       description:
-        'A productivity application for managing tasks with drag-and-drop functionality and real-time updates.',
+        'A user-centric web application built to demystify the resume creation process and help users land their next job.',
       tags: ['React', 'Firebase', 'Material UI'],
       category: 'frontend',
       image: '/projects/taskmanager.jpg',
@@ -51,23 +51,13 @@ export default function ProjectsPage() {
     },
     {
       id: 3,
-      title: 'Restaurant API Service',
+      title: 'POWERPLEX',
       description:
-        'Backend service for restaurant management with menu customization and order processing.',
+        'Developed a comprehensive web application for managing electrical equipment inventory, tracking repair statuses, and scheduling maintenance, reducing equipment downtime by 30% and streamlining operational workflows.',
       tags: ['Node.js', 'Express', 'MongoDB'],
       category: 'backend',
       image: '/projects/restaurant-api.jpg',
       githubUrl: 'https://github.com/yourusername/restaurant-api',
-    },
-    {
-      id: 4,
-      title: 'Fitness Tracker Mobile App',
-      description:
-        'Cross-platform mobile application for tracking workouts and nutrition with data visualization.',
-      tags: ['React Native', 'GraphQL', 'Expo'],
-      category: 'mobile',
-      image: '/projects/fitness-app.jpg',
-      liveUrl: 'https://apps.apple.com/fitness-tracker',
     },
   ];
 

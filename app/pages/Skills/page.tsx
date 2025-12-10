@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   FaCode,
   FaServer,
@@ -8,68 +8,68 @@ import {
   FaPalette,
   FaDatabase,
   FaTools,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 export default function SkillsPage() {
   // Skill categories data
   const skillCategories = [
     {
-      title: 'Frontend Development',
+      title: "Frontend Development",
       icon: <FaCode className="text-yellow-400 text-4xl mb-4" />,
       skills: [
-        { name: 'React', level: 90 },
-        { name: 'Next.js', level: 85 },
-        { name: 'TypeScript', level: 80 },
-        { name: 'JavaScript (ES6+)', level: 85 },
-        { name: 'HTML5 & CSS3', level: 95 },
+        { name: "React", level: 80 },
+        { name: "Next.js", level: 85 },
+        { name: "TypeScript", level: 60 },
+        { name: "JavaScript (ES6+)", level: 80 },
+        { name: "HTML5 & CSS3", level: 95 },
       ],
     },
     {
-      title: 'Backend Development',
+      title: "Backend Development",
       icon: <FaServer className="text-yellow-400 text-4xl mb-4" />,
       skills: [
-        { name: 'Node.js', level: 75 },
-        { name: 'Express', level: 70 },
-        { name: 'REST APIs', level: 80 },
-        { name: 'GraphQL', level: 65 },
+        { name: "Node.js", level: 65 },
+        { name: "Express", level: 60 },
+        { name: "REST APIs", level: 60 },
+        // { name: 'GraphQL', level: 65 },
       ],
     },
     {
-      title: 'Mobile Development',
+      title: "Mobile Development",
       icon: <FaMobile className="text-yellow-400 text-4xl mb-4" />,
       skills: [
-        { name: 'React Native', level: 70 },
-        { name: 'Responsive Design', level: 90 },
-        { name: 'PWA', level: 75 },
+        { name: "React Native", level: 65 },
+        { name: "Responsive Design", level: 90 },
+        { name: "PWA", level: 60 },
       ],
     },
     {
-      title: 'UI/UX Design',
+      title: "UI/UX Design",
       icon: <FaPalette className="text-yellow-400 text-4xl mb-4" />,
       skills: [
-        { name: 'Tailwind CSS', level: 85 },
-        { name: 'Figma', level: 75 },
-        { name: 'Adobe XD', level: 70 },
-        { name: 'User Research', level: 65 },
+        { name: "Tailwind CSS", level: 85 },
+        { name: "Figma", level: 75 },
+        { name: "Adobe XD", level: 60 },
+        { name: "User Research", level: 80 },
       ],
     },
     {
-      title: 'Databases',
+      title: "Databases",
       icon: <FaDatabase className="text-yellow-400 text-4xl mb-4" />,
       skills: [
-        { name: 'MongoDB', level: 70 },
-        { name: 'Firebase', level: 75 },
-        { name: 'PostgreSQL', level: 65 },
+        { name: "MongoDB", level: 60 },
+        { name: "Firebase", level: 65 },
+        // { name: 'PostgreSQL', level: 65 },
       ],
     },
     {
-      title: 'Tools & Other',
+      title: "Tools & Other",
       icon: <FaTools className="text-yellow-400 text-4xl mb-4" />,
       skills: [
-        { name: 'Git & GitHub', level: 85 },
-        { name: 'Docker', level: 60 },
-        { name: 'Jest', level: 70 },
-        { name: 'CI/CD', level: 65 },
+        { name: "Git & GitHub", level: 85 },
+        // { name: 'Docker', level: 60 },
+        // { name: 'Jest', level: 70 },
+        // { name: 'CI/CD', level: 65 },
       ],
     },
   ];
@@ -151,14 +151,14 @@ export default function SkillsPage() {
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              'Problem Solving',
-              'Agile Methodologies',
-              'Technical Writing',
-              'Code Review',
-              'Mentoring',
-              'Public Speaking',
-              'Project Management',
-              'Team Collaboration',
+              "Problem Solving",
+              "Agile Methodologies",
+              "Technical Writing",
+              "Code Review",
+              "Mentoring",
+              "Public Speaking",
+              "Project Management",
+              "Team Collaboration",
             ].map((skill, index) => (
               <motion.div
                 key={index}

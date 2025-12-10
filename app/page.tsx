@@ -1,18 +1,18 @@
-'use client';
-import profilePic from '../public/image.png';
-import Image from 'next/image';
+"use client";
+import profilePic from "../public/image.png";
+import Image from "next/image";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   // Skills data
   const skills = [
-    { name: 'Next.js', level: 90 },
-    { name: 'React', level: 85 },
-    { name: 'TypeScript', level: 80 },
-    { name: 'Tailwind CSS', level: 85 },
-    { name: 'Node.js', level: 75 },
+    { name: "Next.js", level: 75 },
+    { name: "React", level: 75 },
+    { name: "TypeScript", level: 65 },
+    { name: "Tailwind CSS", level: 85 },
+    { name: "Node.js", level: 65 },
   ];
 
   // Animation variants
@@ -43,7 +43,7 @@ export default function Home() {
             className="md:w-1/2 mb-10 md:mb-0"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Hi I&apos;m{' '}
+              Hi I&apos;m{" "}
               <span className="text-yellow-400">Muhammad Ehsan</span>
             </h1>
             <h2 className="text-2xl md:text-3xl mb-6 text-gray-300">

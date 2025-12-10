@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   FaEnvelope,
   FaPhone,
@@ -8,8 +8,8 @@ import {
   FaLinkedin,
   FaGithub,
   FaTwitter,
-} from 'react-icons/fa';
-import { useForm } from 'react-hook-form';
+} from "react-icons/fa";
+import { useForm } from "react-hook-form";
 
 type FormData = {
   name: string;
@@ -29,46 +29,46 @@ export default function ContactPage() {
   const onSubmit = async (data: FormData) => {
     // Here you would typically send the data to your backend or email service
     console.log(data);
-    alert('Thank you for your message! I will get back to you soon.');
+    alert("Thank you for your message! I will get back to you soon.");
     reset();
   };
 
   const contactMethods = [
     {
       icon: <FaEnvelope className="text-yellow-400 text-2xl" />,
-      title: 'Email',
-      value: 'ehsanthedev@gmail.com',
-      href: 'mailto:ehsanthedev@gmail.com',
+      title: "Email",
+      value: "ehsanthedev@gmail.com",
+      href: "mailto:ehsanthedev@gmail.com",
     },
     {
       icon: <FaPhone className="text-yellow-400 text-2xl" />,
-      title: 'Phone',
-      value: '+92 308 9499815',
-      href: 'tel:+923089499815',
+      title: "Phone",
+      value: "+92 308 9499815",
+      href: "tel:+923089499815",
     },
     {
       icon: <FaMapMarkerAlt className="text-yellow-400 text-2xl" />,
-      title: 'Location',
-      value: 'Faisalabad, Pakistan',
-      href: 'https://maps.google.com/?q=Karachi',
+      title: "Location",
+      value: "Faisalabad, Pakistan",
+      href: "https://maps.google.com/?q=Karachi",
     },
   ];
 
   const socialLinks = [
     {
       icon: <FaLinkedin className="text-white text-xl" />,
-      href: 'https://linkedin.com/in/yourprofile',
-      label: 'LinkedIn',
+      href: "https://linkedin.com/in/yourprofile",
+      label: "LinkedIn",
     },
     {
       icon: <FaGithub className="text-white text-xl" />,
-      href: 'https://github.com/yourusername',
-      label: 'GitHub',
+      href: "https://github.com/yourusername",
+      label: "GitHub",
     },
     {
       icon: <FaTwitter className="text-white text-xl" />,
-      href: 'https://twitter.com/yourhandle',
-      label: 'Twitter',
+      href: "https://twitter.com/yourhandle",
+      label: "Twitter",
     },
   ];
 
@@ -171,9 +171,9 @@ export default function ContactPage() {
                       <input
                         id="name"
                         type="text"
-                        {...register('name', { required: 'Name is required' })}
+                        {...register("name", { required: "Name is required" })}
                         className={`w-full bg-gray-700 border ${
-                          errors.name ? 'border-red-500' : 'border-gray-600'
+                          errors.name ? "border-red-500" : "border-gray-600"
                         } rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400`}
                       />
                       {errors.name && (
@@ -193,15 +193,15 @@ export default function ContactPage() {
                       <input
                         id="email"
                         type="email"
-                        {...register('email', {
-                          required: 'Email is required',
+                        {...register("email", {
+                          required: "Email is required",
                           pattern: {
                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                            message: 'Invalid email address',
+                            message: "Invalid email address",
                           },
                         })}
                         className={`w-full bg-gray-700 border ${
-                          errors.email ? 'border-red-500' : 'border-gray-600'
+                          errors.email ? "border-red-500" : "border-gray-600"
                         } rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400`}
                       />
                       {errors.email && (
@@ -222,11 +222,11 @@ export default function ContactPage() {
                     <input
                       id="subject"
                       type="text"
-                      {...register('subject', {
-                        required: 'Subject is required',
+                      {...register("subject", {
+                        required: "Subject is required",
                       })}
                       className={`w-full bg-gray-700 border ${
-                        errors.subject ? 'border-red-500' : 'border-gray-600'
+                        errors.subject ? "border-red-500" : "border-gray-600"
                       } rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400`}
                     />
                     {errors.subject && (
@@ -246,11 +246,11 @@ export default function ContactPage() {
                     <textarea
                       id="message"
                       rows={5}
-                      {...register('message', {
-                        required: 'Message is required',
+                      {...register("message", {
+                        required: "Message is required",
                       })}
                       className={`w-full bg-gray-700 border ${
-                        errors.message ? 'border-red-500' : 'border-gray-600'
+                        errors.message ? "border-red-500" : "border-gray-600"
                       } rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400`}
                     ></textarea>
                     {errors.message && (

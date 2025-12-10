@@ -1,45 +1,52 @@
-'use client';
-import profilePic from '../../../public/image.png';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { FaCode, FaPalette, FaServer, FaMobile } from 'react-icons/fa';
+"use client";
+import profilePic from "../../../public/image.png";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import {
+  FaCode,
+  FaPalette,
+  FaServer,
+  FaMobile,
+  FaDigitalTachograph,
+} from "react-icons/fa";
 
 export default function About() {
   const skills = [
     {
-      name: 'Frontend Development',
+      name: "Frontend Development",
       icon: <FaCode className="text-yellow-400 text-2xl" />,
       description:
-        'Building responsive UIs with React, Next.js, and Tailwind CSS',
+        "Building responsive UIs with React, Next.js, and Tailwind CSS",
     },
     {
-      name: 'UI/UX Design',
+      name: "UI/UX Design",
       icon: <FaPalette className="text-yellow-400 text-2xl" />,
-      description: 'Creating intuitive and visually appealing user experiences',
+      description: "Creating intuitive and visually appealing user experiences",
     },
+
     {
-      name: 'Backend Integration',
-      icon: <FaServer className="text-yellow-400 text-2xl" />,
-      description: 'Connecting frontend with APIs and databases',
-    },
-    {
-      name: 'Mobile Responsiveness',
+      name: "Mobile Responsiveness",
       icon: <FaMobile className="text-yellow-400 text-2xl" />,
-      description: 'Ensuring perfect display on all devices',
+      description: "Ensuring perfect display on all devices",
+    },
+    {
+      name: "Graphic Designing",
+      icon: <FaDigitalTachograph className="text-yellow-400 text-2xl" />,
+      description: "Crafting logos, banners, and marketing materials",
     },
   ];
 
   const experience = [
     {
-      year: '2022-Present',
-      role: 'Frontend Developer',
-      company: 'Tech Solutions Inc.',
+      year: "2022-Present",
+      role: "Frontend Developer",
+      company: "Tech Solutions Inc.",
     },
-    { year: '2020-2022', role: 'UI Developer', company: 'Digital Creations' },
+    { year: "2020-2022", role: "UI Developer", company: "Digital Creations" },
     {
-      year: '2018-2020',
-      role: 'Web Design Intern',
-      company: 'Creative Studio',
+      year: "2018-2020",
+      role: "Web Design Intern",
+      company: "Creative Studio",
     },
   ];
 
@@ -190,7 +197,7 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
                 className={`mb-8 p-6 rounded-lg ${
-                  index % 2 === 0 ? 'bg-gray-800' : 'bg-gray-700'
+                  index % 2 === 0 ? "bg-gray-800" : "bg-gray-700"
                 }`}
               >
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center">
